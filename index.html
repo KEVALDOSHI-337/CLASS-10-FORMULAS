@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 10 Formula Vault | GSEB</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #e0eaff);
+    }
+
+    .landing {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ffa4a4, #a4baff);
+    }
+
+    .landing h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    .landing p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .start-btn {
+      padding: 12px 25px;
+      background: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #6a00ff;
+      transition: 0.3s ease;
+    }
+
+    .start-btn:hover {
+      background: #6a00ff;
+      color: #fff;
+    }
+
+    .container {
+      display: none;
+      padding: 20px;
+    }
+
+    h2 {
+      cursor: pointer;
+      background: #6a00ff;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .subject {
+      margin-bottom: 30px;
+      background: #ffffffaa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .chapter {
+      font-weight: bold;
+      color: #6a00ff;
+      margin-top: 10px;
+    }
+
+    .formula {
+      background: #f0f8ff;
+      margin: 5px 0;
+      padding: 6px 12px;
+      border-left: 4px solid #6a00ff;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .quiz {
+      margin-top: 40px;
+      background: #fff3cd;
+      padding: 20px;
+      border: 2px solid #ffeeba;
+      border-radius: 10px;
+    }
+
+    .quiz h3 {
+      color: #d48806;
+    }
+
+    .option-btn {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border: 2px solid #6a00ff;
+      background: #f0e6ff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+
+    .option-btn:hover {
+      background-color: #d6c5ff;
+    }
+
+    .quiz-result, .scorecard {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .scorecard {
+      color: #004085;
+    }
+
+    .nav-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons button {
+      padding: 10px 20px;
+      background: #6a00ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <div class="landing" id="landing-page">
+    <h1>📚 Class 10 Formula Vault</h1>
+    <p>Learn Smart. Revise Fast. Quiz Yourself. 💯</p>
+    <button class="start-btn" onclick="startApp()">Start Learning ➤</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container" id="main-content">
+    <!-- MATHS FORMULAS -->
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">📐 Mathematics</h2>
+      <div class="hidden">
+        <div class="chapter">Real Numbers</div>
+        <div class="formula">a = bq + r</div>
+        <div class="formula">HCF × LCM = Product of numbers</div>
+
+        <div class="chapter">Polynomials</div>
+        <div class="formula">Quadratic: ax² + bx + c</div>
+        <div class="formula">Sum of roots = -b/a, Product = c/a</div>
+
+        <div class="chapter">Pair of Linear Equations</div>
+        <div class="formula">ax + by = c</div>
+        <div class="formula">x = (b₁c₂ - b₂c₁)/(a₁b₂ - a₂b₁)</div>
+
+        <div class="chapter">Quadratic Equations</div>
+        <div class="formula">x = (-b ± √(b² - 4ac)) / 2a</div>
+
+        <div class="chapter">Arithmetic Progression</div>
+        <div class="formula">aₙ = a + (n - 1)d</div>
+        <div class="formula">Sₙ = n/2 [2a + (n - 1)d]</div>
+
+        <div class="chapter">Triangles</div>
+        <div class="formula">a² + b² = c²</div>
+        <div class="formula">Area = √[s(s-a)(s-b)(s-c)]</div>
+
+        <div class="chapter">Coordinate Geometry</div>
+        <div class="formula">Distance = √[(x₂-x₁)² + (y₂-y₁)²]</div>
+        <div class="formula">Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+
+        <div class="chapter">Surface Area & Volume</div>
+        <div class="formula">Cube: SA = 6a², V = a³</div>
+        <div class="formula">Sphere: SA = 4πr², V = 4/3πr³</div>
+
+        <div class="chapter">Statistics</div>
+        <div class="formula">Mean = Σfx / Σf</div>
+        <div class="formula">Median = l + [(n/2 – F)/f] × h</div>
+        <div class="formula">Mode = l + [(f₁ – f₀)/(2f₁ – f₀ – f₂)] × h</div>
+
+        <div class="chapter">Probability</div>
+        <div class="formula">P(E) = Favourable Outcomes / Total Outcomes</div>
+      </div>
+    </div>
+
+    <!-- SCIENCE FORMULAS -->
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">🔬 Science</h2>
+      <div class="hidden">
+        <div class="chapter">Electricity</div>
+        <div class="formula">V = I × R</div>
+        <div class="formula">P = VI</div>
+        <div class="formula">R = ρL/A</div>
+
+        <div class="chapter">Magnetic Effects</div>
+        <div class="formula">Right Hand Thumb Rule</div>
+        <div class="formula">Fleming’s Left-Hand Rule</div>
+
+        <div class="chapter">Light</div>
+        <div class="formula">1/f = 1/v - 1/u</div>
+        <div class="formula">m = h'/h = -v/u</div>
+
+        <div class="chapter">Chemical Reactions</div>
+        <div class="formula">Zn + HCl → ZnCl₂ + H₂</div>
+
+        <div class="chapter">Acids, Bases & Salts</div>
+        <div class="formula">Acid + Base → Salt + Water</div>
+
+        <div class="chapter">Carbon Compounds</div>
+        <div class="formula">CH₄, C₂H₆ are Alkanes</div>
+        <div class="formula">Functional Groups: -OH, -COOH</div>
+
+        <div class="chapter">Life Processes</div>
+        <div class="formula">Nutrition, Respiration, Excretion, Transportation</div>
+
+        <div class="chapter">Control & Coordination</div>
+        <div class="formula">Reflex Arc, Endocrine Glands</div>
+
+        <div class="chapter">Heredity</div>
+        <div class="formula">Mendel’s Laws: Dominance, Segregation</div>
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz">
+      <h3>🧠 Quiz Yourself</h3>
+      <div class="scorecard" id="score"></div>
+      <div id="question-text"></div>
+      <div id="options"></div>
+      <div class="quiz-result" id="quiz-result"></div>
+      <div class="nav-buttons">
+        <button onclick="submitAnswer()">Submit</button>
+        <button onclick="nextQuestion()">Next Question</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startApp() {
+      document.getElementById("landing-page").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }
+
+    function toggleSection(el) {
+      el.nextElementSibling.classList.toggle("hidden");
+    }
+
+    const questions = [
+      { q: "Formula for nth term of AP?", a: "a + (n - 1)d", opts: ["a × n", "a + (n - 1)d", "n / 2 (a + l)", "a + nd"] },
+      { q: "Ohm's Law formula?", a: "v = i × r", opts: ["v = i × r", "p = iv", "i = v × r", "r = vi"] },
+      { q: "Heron's formula?", a: "√[s(s-a)(s-b)(s-c)]", opts: ["½bh", "ab sinθ", "√[s(s-a)(s-b)(s-c)]", "πr²"] },
+      { q: "Mirror formula?", a: "1/f = 1/v - 1/u", opts: ["f = v/u", "1/f = 1/v - 1/u", "m = -v/u", "f = uv/(u+v)"] },
+      { q: "Electric Power formula?", a: "p = vi", opts: ["p = v + i", "p = vi", "p = v/i", "p = i²r"] }
+    ];
+
+    let score = 0;
+    let current = 0;
+    let attempts = 0;
+    let selectedAnswer = "";
+
+    function loadQuestion() {
+      const q = questions[current];
+      document.getElementById("question-text").innerText = q.q;
+      const optionsDiv = document.getElementById("options");
+      document.getElementById("quiz-result").innerText = "";
+      selectedAnswer = "";
+      attempts = 0;
+      optionsDiv.innerHTML = "";
+      q.opts.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.innerText = opt;
+        btn.onclick = () => {
+          selectedAnswer = opt.toLowerCase();
+          document.querySelectorAll(".option-btn").forEach(b => b.style.border = "2px solid #6a00ff");
+          btn.style.border = "3px solid green";
+        };
+        optionsDiv.appendChild(btn);
+      });
+      updateScore();
+    }
+
+    function submitAnswer() {
+      if (!selectedAnswer) return alert("Please select an option!");
+      attempts++;
+      const correct = questions[current].a.toLowerCase();
+      if (selectedAnswer === correct) {
+        score++;
+        document.getElementById("quiz-result").innerText = "✅ Correct!";
+      } else if (attempts === 1) {
+        document.getElementById("quiz-result").innerText = "❌ Try again!";
+      } else {
+        document.getElementById("quiz-result").innerText = `❌ Correct Answer: ${questions[current].a} \n💡 Hint: Go check related formula above!`;
+      }
+      updateScore();
+    }
+
+    function nextQuestion() {
+      current = (current + 1) % questions.length;
+      loadQuestion();
+    }
+
+    function updateScore() {
+      document.getElementById("score").innerText = `🏆 Score: ${score} / ${questions.length}`;
+    }
+
+    // Load first question
+    loadQuestion();
+  </script>
+</body>
+</html>
