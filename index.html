@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 10 Formula Vault | GSEB/CBSE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #e0eaff);
+    }
+    .landing {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ffa4a4, #a4baff);
+    }
+    .landing h1 {
+      font-size: 3.5rem;
+      color: #fff;
+    }
+    .landing p {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .start-btn {
+      padding: 15px 32px;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #6a00ff;
+      transition: 0.3s ease;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #0002;
+    }
+    .start-btn:hover {
+      background: #6a00ff;
+      color: #fff;
+    }
+    .container {
+      display: none;
+      padding: 20px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    h2 {
+      cursor: pointer;
+      background: #6a00ff;
+      color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px #0001;
+    }
+    .subject {
+      margin-bottom: 32px;
+      background: #ffffffcc;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px #0001;
+    }
+    .chapter {
+      font-weight: bold;
+      color: #6a00ff;
+      margin-top: 18px;
+      font-size: 1.35em;
+      margin-bottom: 6px;
+    }
+    .formula {
+      background: #f0f8ff;
+      margin: 8px 0;
+      padding: 16px 20px;
+      border-left: 6px solid #6a00ff;
+      border-radius: 8px;
+      font-family: 'Fira Mono', monospace;
+      font-size: 1.35em;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 4px #0001;
+      transition: background 0.2s;
+    }
+    .formula:hover {
+      background: #e6e6fa;
+    }
+    .explanation {
+      color: #345;
+      font-size: 1.15em;
+      margin-left: 8px;
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+    .example {
+      color: #195d25;
+      font-size: 1.15em;
+      margin-left: 8px;
+      margin-top: 2px;
+      font-style: italic;
+    }
+    .hidden {
+      display: none;
+    }
+    .quiz {
+      margin-top: 50px;
+      background: #fff3cd;
+      padding: 28px 16px;
+      border: 2px solid #ffeeba;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #0001;
+    }
+    .quiz h3 {
+      color: #d48806;
+      font-size: 2em;
+      margin-top: 0;
+    }
+    .option-btn {
+      padding: 14px;
+      margin: 7px 0;
+      width: 100%;
+      border: 2.5px solid #6a00ff;
+      background: #f0e6ff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.13rem;
+      font-family: inherit;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .option-btn:hover {
+      background-color: #d6c5ff;
+    }
+    .quiz-result, .scorecard {
+      margin-top: 12px;
+      font-weight: bold;
+      font-size: 1.15em;
+    }
+    .scorecard {
+      color: #004085;
+    }
+    .nav-buttons {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-buttons button {
+      padding: 12px 28px;
+      background: #6a00ff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 1.15em;
+      font-weight: 600;
+      transition: 0.2s;
+      box-shadow: 0 1px 8px #6a00ff22;
+    }
+    .nav-buttons button:hover {
+      background: #4300a3;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 6px; }
+      .quiz { padding: 10px; }
+      .subject { padding: 8px; }
+      h2 { font-size: 1.1em; }
+      .formula { font-size: 1em; padding: 10px; }
+      .quiz h3 { font-size: 1.2em;}
+      .nav-buttons button { font-size: 1em; padding: 8px 12px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Landing Page -->
+  <div class="landing" id="landing-page">
+    <h1>📚 Class 10 Formula Vault</h1>
+    <p>All Maths & Science Formulas + Smart Quizzes. Revise and Master Quickly!</p>
+    <button class="start-btn" onclick="startApp()">Start Learning ➤</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container" id="main-content">
+    <!-- MATHS FORMULAS -->
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">📐 Mathematics</h2>
+      <div class="hidden">
+        <!-- Real Numbers -->
+        <div class="chapter">Real Numbers</div>
+        <div class="formula">
+          a = bq + r
+          <span class="explanation">Euclid's division lemma: a, b are integers, b ≠ 0, q = quotient, r = remainder.</span>
+          <span class="example">Example: 20 = 6 × 3 + 2</span>
+        </div>
+        <div class="formula">
+          HCF × LCM = Product of numbers
+          <span class="explanation">Relation for any two positive integers.</span>
+          <span class="example">Example: HCF(8,12) × LCM(8,12) = 24 × 4 = 96 = 8 × 12</span>
+        </div>
+        <div class="formula">
+          If p is prime & p | ab ⇒ p | a or p | b
+          <span class="explanation">Fundamental theorem of arithmetic.</span>
+          <span class="example">Example: If 2 | ab, then 2 divides a or 2 divides b.</span>
+        </div>
+
+        <!-- Polynomials -->
+        <div class="chapter">Polynomials</div>
+        <div class="formula">
+          Quadratic: ax² + bx + c
+          <span class="explanation">Standard form.</span>
+          <span class="example">Example: 2x² + 3x + 1 is quadratic (a=2, b=3, c=1).</span>
+        </div>
+        <div class="formula">
+          Sum of roots = -b/a; Product = c/a
+          <span class="explanation">For quadratic equations.</span>
+          <span class="example">Example: In x²-5x+6=0, sum = 5/1 = 5, product = 6/1 = 6.</span>
+        </div>
+        <div class="formula">
+          Remainder Theorem: If f(x) is divided by (x-a), remainder is f(a)
+          <span class="example">Example: f(x)=x²+3x+4, divided by x-2: remainder = f(2) = 4 + 6 + 4 = 14</span>
+        </div>
+        <div class="formula">
+          Factor Theorem: If f(a) = 0, (x-a) is a factor of f(x)
+          <span class="example">Example: If f(1)=0, then (x-1) is a factor of f(x).</span>
+        </div>
+
+        <!-- Pair of Linear Equations -->
+        <div class="chapter">Pair of Linear Equations in Two Variables</div>
+        <div class="formula">
+          ax + by = c
+          <span class="explanation">General form.</span>
+          <span class="example">Example: 2x + 3y = 13</span>
+        </div>
+        <div class="formula">
+          x = (b₁c₂ - b₂c₁)/(a₁b₂ - a₂b₁)
+          <span class="explanation">Solution by cross-multiplication.</span>
+          <span class="example">Example: Solve 2x+3y=7 & 3x+2y=8 ⇒ x = (3×8−2×7)/(2×2−3×3) = (24−14)/(4−9) = 10/−5 = −2</span>
+        </div>
+        <div class="formula">
+          y = (c₁a₂ - c₂a₁)/(a₁b₂ - a₂b₁)
+          <span class="example">Example: y = (7×3−8×2)/(2×2−3×3) = (21−16)/(4−9) = 5/−5 = −1</span>
+        </div>
+
+        <!-- Quadratic Equations -->
+        <div class="chapter">Quadratic Equations</div>
+        <div class="formula">
+          x = (-b ± √(b² - 4ac)) / 2a
+          <span class="explanation">Quadratic formula for solutions.</span>
+          <span class="example">Example: x²−3x+2=0 ⇒ x=(3±√(9−8))/2 = (3±1)/2 ⇒ x=2,1</span>
+        </div>
+        <div class="formula">
+          Discriminant D = b² - 4ac
+          <span class="explanation">D > 0: two real roots, D = 0: one root, D < 0: no real roots.</span>
+          <span class="example">Example: For x²+2x+1=0, D=4−4=0 ⇒ one real root.</span>
+        </div>
+
+        <!-- Arithmetic Progression -->
+        <div class="chapter">Arithmetic Progression</div>
+        <div class="formula">
+          aₙ = a + (n - 1)d
+          <span class="explanation">n-th term of AP.</span>
+          <span class="example">Example: a=2, d=3, n=5 ⇒ a₅=2+4×3=14</span>
+        </div>
+        <div class="formula">
+          Sₙ = n/2 [2a + (n - 1)d]
+          <span class="explanation">Sum of first n terms.</span>
+          <span class="example">Example: a=2, d=3, n=4 ⇒ S₄=2[4+9]=2×13=26</span>
+        </div>
+        <div class="formula">
+          Sₙ = n/2 (a + l)
+          <span class="explanation">If last term l is known.</span>
+          <span class="example">Example: a=2, l=14, n=5 ⇒ S₅=5/2×(2+14)=5/2×16=40</span>
+        </div>
+
+        <!-- Triangles -->
+        <div class="chapter">Triangles</div>
+        <div class="formula">
+          a² + b² = c²
+          <span class="explanation">Pythagoras theorem.</span>
+          <span class="example">Example: If a=3, b=4, then c=5 because 3²+4²=9+16=25=5²</span>
+        </div>
+        <div class="formula">
+          Area = √[s(s-a)(s-b)(s-c)]
+          <span class="explanation">Heron's formula, s = (a+b+c)/2.</span>
+          <span class="example">Example: a=3, b=4, c=5 ⇒ s=6, Area=√[6×3×2×1]=√36=6</span>
+        </div>
+        <div class="formula">
+          Basic Proportionality Theorem: If DE || BC, then AD/DB = AE/EC
+          <span class="example">Example: In △ABC, if DE∥BC and AD=2, DB=4, then AE/EC=2/4=1/2</span>
+        </div>
+        <div class="formula">
+          Similarity: If ∆ABC ~ ∆DEF, then AB/DE = BC/EF = CA/FD
+          <span class="example">Example: If AB=4, DE=2, then BC/EF=CA/FD=2</span>
+        </div>
+
+        <!-- Coordinate Geometry -->
+        <div class="chapter">Coordinate Geometry</div>
+        <div class="formula">
+          Distance = √[(x₂-x₁)² + (y₂-y₁)²]
+          <span class="explanation">Between two points.</span>
+          <span class="example">Example: (1,2) & (4,6): √[(4−1)² + (6−2)²]=√[9+16]=5</span>
+        </div>
+        <div class="formula">
+          Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2)
+          <span class="example">Example: (1,2) & (3,4): ((1+3)/2, (2+4)/2) = (2,3)</span>
+        </div>
+        <div class="formula">
+          Area of triangle = ½ |x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|
+          <span class="example">Example: (0,0),(4,0),(0,3): Area=½|0×(0-3)+4×(3-0)+0×(0-0)|=½|0+12+0|=6</span>
+        </div>
+
+        <!-- Trigonometry -->
+        <div class="chapter">Introduction to Trigonometry</div>
+        <div class="formula">
+          sinθ = Opposite/Hypotenuse
+          <span class="example">Example: If opposite=3, hypotenuse=5, sinθ=3/5</span>
+        </div>
+        <div class="formula">
+          cosθ = Adjacent/Hypotenuse
+          <span class="example">Example: If adjacent=4, hypotenuse=5, cosθ=4/5</span>
+        </div>
+        <div class="formula">
+          tanθ = Opposite/Adjacent = sinθ/cosθ
+          <span class="example">Example: If sinθ=3/5, cosθ=4/5, tanθ=(3/5)/(4/5)=3/4</span>
+        </div>
+        <div class="formula">
+          sin²θ + cos²θ = 1
+          <span class="example">Example: For θ=30°, sin²30°+cos²30°=(1/2)²+(√3/2)²=1/4+3/4=1</span>
+        </div>
+        <div class="formula">
+          1 + tan²θ = sec²θ
+          <span class="example">Example: If tanθ=1, sec²θ=1+1=2</span>
+        </div>
+        <div class="formula">
+          1 + cot²θ = cosec²θ
+          <span class="example">Example: If cotθ=1, cosec²θ=1+1=2</span>
+        </div>
+        <div class="formula">
+          Trigonometric Ratios Table: 0°, 30°, 45°, 60°, 90°
+          <span class="example">Example: sin30°=1/2, cos45°=1/√2, tan60°=√3</span>
+        </div>
+
+        <!-- Applications of Trigonometry -->
+        <div class="chapter">Applications of Trigonometry</div>
+        <div class="formula">
+          Height = Distance × tanθ
+          <span class="explanation">Use for angle of elevation/depression.</span>
+          <span class="example">Example: Distance=10m, θ=45° ⇒ Height=10×tan45°=10×1=10m</span>
+        </div>
+
+        <!-- Circles -->
+        <div class="chapter">Circles</div>
+        <div class="formula">
+          Tangent at any point of a circle is perpendicular to the radius at that point.
+          <span class="example">Example: At point A on circle, tangent ⟂ OA (radius)</span>
+        </div>
+        <div class="formula">
+          Length of tangent from external point = √(OP² - r²)
+          <span class="example">Example: OP=13, r=5 ⇒ Length=√(169−25)=√144=12</span>
+        </div>
+
+        <!-- Areas Related to Circles -->
+        <div class="chapter">Areas Related to Circles</div>
+        <div class="formula">
+          Circumference = 2πr
+          <span class="example">Example: r=7 ⇒ Circumference=2×π×7=44cm (approx)</span>
+        </div>
+        <div class="formula">
+          Area = πr²
+          <span class="example">Example: r=7 ⇒ Area=π×7×7=154cm² (approx)</span>
+        </div>
+        <div class="formula">
+          Area of sector = (θ/360°) × πr²
+          <span class="example">Example: θ=90°, r=7 ⇒ Area=(90/360)×π×49=38.5cm² (approx)</span>
+        </div>
+        <div class="formula">
+          Area of segment = Area of sector - Area of triangle
+          <span class="example">Example: Find sector and triangle area, then subtract.</span>
+        </div>
+
+        <!-- Surface Area & Volume -->
+        <div class="chapter">Surface Areas and Volumes</div>
+        <div class="formula">
+          Cube: SA = 6a², V = a³
+          <span class="example">Example: a=4 ⇒ SA=6×16=96, V=64</span>
+        </div>
+        <div class="formula">
+          Cuboid: SA = 2(lb + bh + hl), V = lbh
+          <span class="example">Example: l=2,b=3,h=4⇒SA=2(6+12+8)=2×26=52, V=24</span>
+        </div>
+        <div class="formula">
+          Cylinder: CSA = 2πrh, TSA = 2πr(r + h), V = πr²h
+          <span class="example">Example: r=3,h=7⇒CSA=2×π×3×7=132, V=π×9×7=198</span>
+        </div>
+        <div class="formula">
+          Cone: CSA = πrl, TSA = πr(l + r), V = (1/3)πr²h
+          <span class="example">Example: r=3,l=5,h=4⇒CSA=π×3×5=47.1, V=(1/3)×π×9×4=37.7</span>
+        </div>
+        <div class="formula">
+          Sphere: SA = 4πr², V = (4/3)πr³
+          <span class="example">Example: r=2⇒SA=4×π×4=50.3, V=33.5</span>
+        </div>
+        <div class="formula">
+          Hemisphere: CSA = 2πr², TSA = 3πr², V = (2/3)πr³
+          <span class="example">Example: r=3⇒CSA=2×π×9=56.6, TSA=84.8, V=56.5</span>
+        </div>
+        <div class="formula">
+          Frustum: V = (1/3)πh(R² + r² + Rr)
+          <span class="example">Example: R=4, r=2, h=6 ⇒ V= (1/3)π×6(16+4+8)= (1/3)π×6×28=176π/3</span>
+        </div>
+
+        <!-- Statistics -->
+        <div class="chapter">Statistics</div>
+        <div class="formula">
+          Mean = Σfx / Σf
+          <span class="explanation">For grouped data.</span>
+          <span class="example">Example: Σfx=200, Σf=50 ⇒ Mean=4</span>
+        </div>
+        <div class="formula">
+          Median = l + [(n/2 – F)/f] × h
+          <span class="explanation">l=lower class boundary, n=total freq, F=cum. freq, f=freq, h=class width.</span>
+          <span class="example">Example: l=10, n=50, F=20, f=10, h=5 ⇒ Median=10+[(25-20)/10]×5=10+2.5=12.5</span>
+        </div>
+        <div class="formula">
+          Mode = l + [(f₁ – f₀)/(2f₁ – f₀ – f₂)] × h
+          <span class="explanation">l=lower boundary, f₁=modal, f₀=before, f₂=after, h=class width.</span>
+          <span class="example">Example: l=20, f₁=15, f₀=12, f₂=9, h=5 ⇒ Mode=20+[(15-12)/(30-12-9)]×5=20+3/9×5=21.67</span>
+        </div>
+
+        <!-- Probability -->
+        <div class="chapter">Probability</div>
+        <div class="formula">
+          P(E) = Favourable Outcomes / Total Outcomes
+          <span class="explanation">Empirical probability.</span>
+          <span class="example">Example: Coin toss, P(Head)=1/2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCIENCE FORMULAS -->
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">🔬 Science (Physics)</h2>
+      <div class="hidden">
+        <div class="chapter">Electricity</div>
+        <div class="formula">
+          V = I × R
+          <span class="explanation">Ohm's Law: V = Voltage, I = Current, R = Resistance.</span>
+          <span class="example">Example: I=2A, R=5Ω ⇒ V=2×5=10V</span>
+        </div>
+        <div class="formula">
+          I = Q / t
+          <span class="explanation">Current = Charge / Time.</span>
+          <span class="example">Example: Q=10C, t=2s ⇒ I=10/2=5A</span>
+        </div>
+        <div class="formula">
+          P = VI
+          <span class="explanation">Electric Power = Voltage × Current.</span>
+          <span class="example">Example: V=220V, I=2A ⇒ P=220×2=440W</span>
+        </div>
+        <div class="formula">
+          P = I²R = V²/R
+          <span class="example">Example: I=2A, R=5Ω ⇒ P=4×5=20W; V=10V ⇒ P=100/5=20W</span>
+        </div>
+        <div class="formula">
+          R = ρL / A
+          <span class="explanation">Resistance in terms of resistivity.</span>
+          <span class="example">Example: ρ=1.6, L=2m, A=0.5m² ⇒ R=1.6×2/0.5=6.4Ω</span>
+        </div>
+        <div class="formula">
+          V = W / Q
+          <span class="explanation">Potential difference = Work done / Charge.</span>
+          <span class="example">Example: W=20J, Q=4C ⇒ V=20/4=5V</span>
+        </div>
+        <div class="formula">
+          R (series) = R₁ + R₂ + ...
+          <span class="example">Example: R₁=2Ω, R₂=3Ω ⇒ R=5Ω</span>
+        </div>
+        <div class="formula">
+          1/R (parallel) = 1/R₁ + 1/R₂ + ...
+          <span class="example">Example: R₁=2Ω, R₂=3Ω ⇒ 1/R=1/2+1/3=5/6⇒R=1.2Ω</span>
+        </div>
+
+        <div class="chapter">Magnetic Effects of Electric Current</div>
+        <div class="formula">
+          Right Hand Thumb Rule
+          <span class="explanation">Direction of magnetic field around a conductor.</span>
+          <span class="example">Example: Thumb points current, fingers show magnetic field direction.</span>
+        </div>
+        <div class="formula">
+          Fleming’s Left-Hand Rule
+          <span class="explanation">Direction of force on a current-carrying conductor.</span>
+          <span class="example">Example: Thumb=Force, First finger=Field, Second finger=Current</span>
+        </div>
+        <div class="formula">
+          Force (F) = BIL sinθ
+          <span class="explanation">B=magnetic field, I=current, L=length.</span>
+          <span class="example">Example: B=0.5T, I=2A, L=1m, θ=90° ⇒ F=0.5×2×1×1=1N</span>
+        </div>
+
+        <div class="chapter">Sources of Energy</div>
+        <div class="formula">
+          Efficiency = (Useful Energy Output)/(Total Energy Input) × 100%
+          <span class="example">Example: Output=40J, Input=50J ⇒ Eff=40/50×100=80%</span>
+        </div>
+
+        <div class="chapter">Light – Reflection and Refraction</div>
+        <div class="formula">
+          1/f = 1/v - 1/u
+          <span class="explanation">Lens/Mirror formula: f=focal length, v=image, u=object distance.</span>
+          <span class="example">Example: u=−20cm, v=30cm ⇒ 1/f=1/30−1/(−20)=1/30+1/20=5/60=1/12 ⇒ f=12cm</span>
+        </div>
+        <div class="formula">
+          m = h'/h = -v/u
+          <span class="explanation">Magnification.</span>
+          <span class="example">Example: v=30, u=−20 ⇒ m=−30/(−20)=1.5</span>
+        </div>
+        <div class="formula">
+          Refractive Index (n) = sin i / sin r = v₁/v₂ = n₂/n₁
+          <span class="example">Example: sin i=0.5, sin r=0.33 ⇒ n=0.5/0.33≈1.5</span>
+        </div>
+        <div class="formula">
+          Snell's Law: n₁ sin i = n₂ sin r
+          <span class="example">Example: n₁=1, i=30°, n₂=1.5 ⇒ 1×sin30=1.5×sin r → sin r=0.5/1.5=0.33</span>
+        </div>
+
+        <div class="chapter">Human Eye</div>
+        <div class="formula">
+          Power of lens (D, dioptre) = 1/f (in meter)
+          <span class="example">Example: f=0.5m ⇒ Power=1/0.5=2D</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">⚗️ Science (Chemistry)</h2>
+      <div class="hidden">
+        <div class="chapter">Chemical Reactions and Equations</div>
+        <div class="formula">
+          Zn + H₂SO₄ → ZnSO₄ + H₂
+          <span class="example">Example: Zinc and sulphuric acid produce zinc sulfate and hydrogen gas.</span>
+        </div>
+        <div class="formula">
+          Acid + Base → Salt + Water
+          <span class="explanation">Neutralisation reaction.</span>
+          <span class="example">Example: HCl + NaOH → NaCl + H₂O</span>
+        </div>
+        <div class="formula">
+          A + BC → AC + B
+          <span class="explanation">Displacement reaction.</span>
+          <span class="example">Example: Zn + CuSO₄ → ZnSO₄ + Cu</span>
+        </div>
+        <div class="formula">
+          AB + CD → AD + CB
+          <span class="explanation">Double displacement reaction.</span>
+          <span class="example">Example: AgNO₃ + NaCl → AgCl + NaNO₃</span>
+        </div>
+
+        <div class="chapter">Acids, Bases & Salts</div>
+        <div class="formula">
+          pH = -log₁₀[H⁺]
+          <span class="example">Example: [H⁺]=1×10⁻⁴ ⇒ pH=4</span>
+        </div>
+        <div class="formula">
+          NaOH + HCl → NaCl + H₂O
+          <span class="example">Example: Sodium hydroxide reacts with hydrochloric acid to form salt and water.</span>
+        </div>
+        <div class="formula">
+          Metal + Acid → Salt + H₂
+          <span class="example">Example: Zn + 2HCl → ZnCl₂ + H₂</span>
+        </div>
+
+        <div class="chapter">Metals and Non-metals</div>
+        <div class="formula">
+          2Na + 2H₂O → 2NaOH + H₂
+          <span class="example">Example: Sodium reacts with water to form sodium hydroxide and hydrogen.</span>
+        </div>
+        <div class="formula">
+          Zn + CuSO₄ → ZnSO₄ + Cu
+          <span class="example">Example: Zinc displaces copper from copper sulphate solution.</span>
+        </div>
+
+        <div class="chapter">Carbon and Its Compounds</div>
+        <div class="formula">
+          CH₄, C₂H₆ are Alkanes
+          <span class="explanation">General formula CnH2n+2.</span>
+          <span class="example">Example: For n=2, C₂H₆ is ethane.</span>
+        </div>
+        <div class="formula">
+          Alkene: CnH2n; Alkyne: CnH2n-2
+          <span class="example">Example: C₂H₄ is ethene (alkene), C₂H₂ is ethyne (alkyne).</span>
+        </div>
+        <div class="formula">
+          Functional Groups: -OH (Alcohol), -COOH (Carboxylic acid)
+          <span class="example">Example: CH₃OH is methanol (alcohol); CH₃COOH is acetic acid (carboxylic acid).</span>
+        </div>
+        <div class="formula">
+          Ethanol + Sodium → Sodium Ethoxide + H₂
+          <span class="example">Example: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject">
+      <h2 onclick="toggleSection(this)">🧬 Science (Biology)</h2>
+      <div class="hidden">
+        <div class="chapter">Life Processes</div>
+        <div class="formula">
+          Nutrition: Ingestion → Digestion → Absorption → Assimilation → Egestion
+          <span class="example">Example: Eating food, digesting, absorbing nutrients, using them, removing waste.</span>
+        </div>
+        <div class="formula">
+          Respiration: Glucose + O₂ → CO₂ + H₂O + Energy
+          <span class="example">Example: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + Energy</span>
+        </div>
+        <div class="formula">
+          Transportation: Xylem (water), Phloem (food)
+          <span class="example">Example: Water moves up in xylem; food moves in phloem.</span>
+        </div>
+        <div class="formula">
+          Excretion: Kidney (Nephron = functional unit)
+          <span class="example">Example: Kidneys remove urea via urine; nephron filters blood.</span>
+        </div>
+
+        <div class="chapter">Control and Coordination</div>
+        <div class="formula">
+          Reflex Arc: Stimulus → Receptor → Sensory Nerve → Spinal Cord → Motor Nerve → Effector
+          <span class="example">Example: Touching a hot object, hand moves away automatically.</span>
+        </div>
+        <div class="formula">
+          Endocrine Glands: Pituitary, Thyroid, Pancreas, Adrenal
+          <span class="example">Example: Pancreas secretes insulin; Adrenal secretes adrenaline.</span>
+        </div>
+
+        <div class="chapter">Heredity and Evolution</div>
+        <div class="formula">
+          Mendel’s Laws: Dominance, Segregation, Independent Assortment
+          <span class="example">Example: Tall (T) is dominant over short (t) in pea plants.</span>
+        </div>
+        <div class="formula">
+          Sex determination in humans: XX (female), XY (male)
+          <span class="example">Example: XX = girl, XY = boy</span>
+        </div>
+
+        <div class="chapter">Our Environment</div>
+        <div class="formula">
+          Food Chain: Producer → Primary Consumer → Secondary Consumer → Tertiary Consumer
+          <span class="example">Example: Grass → Grasshopper → Frog → Snake</span>
+        </div>
+        <div class="formula">
+          10% Law: Only 10% of energy passes to next trophic level
+          <span class="example">Example: 1000J (plants) → 100J (herbivore) → 10J (carnivore)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz">
+      <h3>🧠 Quiz Yourself</h3>
+      <div class="scorecard" id="score"></div>
+      <div id="question-text"></div>
+      <div id="options"></div>
+      <div class="quiz-result" id="quiz-result"></div>
+      <div class="nav-buttons">
+        <button onclick="submitAnswer()">Submit</button>
+        <button onclick="nextQuestion()">Next Question</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startApp() {
+      document.getElementById("landing-page").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }
+
+    function toggleSection(el) {
+      el.nextElementSibling.classList.toggle("hidden");
+    }
+
+    // --- QUIZ QUESTIONS ---
+    // (Quiz section remains unchanged for brevity; see previous code for full quiz content)
+    const questions = [
+      // Maths
+      { q: "What is the formula for the nth term of an AP?", a: "a + (n - 1)d", opts: ["a × n", "a + (n - 1)d", "n / 2 (a + l)", "a + nd"] },
+      { q: "Quadratic formula for solving ax² + bx + c = 0?", a: "(-b ± √(b² - 4ac)) / 2a", opts: ["(-b ± √(b² - 4ac)) / 2a", "a² + b² = c²", "ax + by + c = 0", "a + (n-1)d"] },
+      { q: "Discriminant D for a quadratic equation?", a: "b² - 4ac", opts: ["b² - 4ac", "a + (n-1)d", "c/a", "ax + by = c"] },
+      { q: "Heron's formula for area of triangle?", a: "√[s(s-a)(s-b)(s-c)]", opts: ["½bh", "ab sinθ", "√[s(s-a)(s-b)(s-c)]", "πr²"] },
+      { q: "Relationship between HCF and LCM?", a: "HCF × LCM = Product of numbers", opts: ["HCF × LCM = Product of numbers", "HCF + LCM = Product", "a = bq + r", "HCF/LCM = Product"] },
+      { q: "Distance formula in coordinate geometry?", a: "√[(x₂-x₁)² + (y₂-y₁)²]", opts: ["√[(x₂-x₁)² + (y₂-y₁)²]", "a² + b² = c²", "½ × base × height", "(x₁+x₂)/2"] },
+      { q: "Circumference of a circle?", a: "2πr", opts: ["πr²", "2πr", "πd²", "πr"] },
+      { q: "Area of a sector of a circle?", a: "(θ/360°) × πr²", opts: ["(θ/360°) × πr²", "πr²/2", "2πr", "πr"] },
+      { q: "Mean of grouped data?", a: "Σfx / Σf", opts: ["Σfx / Σf", "Σf / Σfx", "Σx / N", "Σf / Σx"] },
+      { q: "Probability of an event?", a: "Favourable Outcomes / Total Outcomes", opts: ["Favourable Outcomes / Total Outcomes", "Favourable Outcomes × Total Outcomes", "1 / Total Outcomes", "Total Outcomes / Favourable Outcomes"] },
+      { q: "If sinθ = 1/2, θ equals?", a: "30°", opts: ["0°", "30°", "45°", "90°"] },
+      { q: "Pythagoras Theorem?", a: "a² + b² = c²", opts: ["a² + b² = c²", "a² = b² + c²", "a + b = c", "a × b = c²"] },
+      { q: "Midpoint formula between (x₁, y₁) and (x₂, y₂)?", a: "((x₁+x₂)/2, (y₁+y₂)/2)", opts: ["((x₁+x₂)/2, (y₁+y₂)/2)", "(x₁x₂, y₁y₂)", "((x₁-x₂)/2, (y₁-y₂)/2)", "(x₁+x₂, y₁+y₂)"] },
+      { q: "Area of triangle by coordinate geometry?", a: "½ |x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|", opts: ["½ |x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|", "½bh", "πr²", "ab sinθ"] },
+      { q: "Surface area of a sphere?", a: "4πr²", opts: ["4πr²", "πr²", "2πr", "3πr²"] },
+      { q: "Volume of a cylinder?", a: "πr²h", opts: ["πr²h", "2πrh", "πrh", "πr²/2"] },
+      { q: "Basic Proportionality Theorem relates to?", a: "Similar triangles", opts: ["Similar triangles", "Congruent circles", "Cubes", "Rectangle"] },
+      { q: "If D = 0 for quadratic equation, number of roots?", a: "One real root", opts: ["No real roots", "One real root", "Two real roots", "Three roots"] },
+      { q: "Mode formula for grouped data?", a: "l + [(f₁ – f₀)/(2f₁ – f₀ – f₂)] × h", opts: ["l + [(f₁ – f₀)/(2f₁ – f₀ – f₂)] × h", "Σfx / Σf", "l + [(n/2 – F)/f] × h", "Sₙ = n/2[2a + (n-1)d]"] },
+      // Physics
+      { q: "Ohm's Law formula?", a: "V = I × R", opts: ["V = I × R", "P = IV", "I = V × R", "R = VI"] },
+      { q: "Electric Power in terms of voltage and current?", a: "P = VI", opts: ["P = VI", "P = V/I", "P = I²R", "P = V²R"] },
+      { q: "Potential difference formula?", a: "V = W / Q", opts: ["V = W / Q", "V = Q / W", "V = IR", "V = P / I"] },
+      { q: "Total resistance in series?", a: "R (series) = R₁ + R₂ + ...", opts: ["R (series) = R₁ + R₂ + ...", "1/R = 1/R₁ + 1/R₂", "R = V/I", "R = ρL/A"] },
+      { q: "Lens/Mirror formula?", a: "1/f = 1/v - 1/u", opts: ["1/f = 1/v - 1/u", "f = v/u", "1/f = 1/u + 1/v", "f = uv/(u+v)"] },
+      { q: "Magnification formula for mirror/lens?", a: "m = h'/h = -v/u", opts: ["m = h'/h = -v/u", "m = v/u", "m = h/h'", "m = u/v"] },
+      { q: "Power of lens in dioptre?", a: "1/f (in meter)", opts: ["1/f (in meter)", "f/1", "1/f (in cm)", "f × 1"] },
+      { q: "What is Fleming’s Left-Hand Rule used for?", a: "Direction of force on current-carrying conductor", opts: ["Direction of force on current-carrying conductor", "Direction of magnetic field", "Calculating resistance", "Determining voltage"] },
+      // Chemistry
+      { q: "pH formula?", a: "pH = -log₁₀[H⁺]", opts: ["pH = -log₁₀[H⁺]", "pH = log₁₀[H⁺]", "pH = [H⁺]", "pH = -[H⁺]"] },
+      { q: "General formula for alkanes?", a: "CnH2n+2", opts: ["CnH2n+2", "CnH2n", "CnH2n-2", "CnH2n+1"] },
+      { q: "Neutralisation reaction?", a: "Acid + Base → Salt + Water", opts: ["Acid + Base → Salt + Water", "Metal + Acid → Salt + H₂", "Zn + HCl → ZnCl₂ + H₂", "C + O₂ → CO₂"] },
+      // Biology
+      { q: "What is the main product of respiration?", a: "Energy", opts: ["Energy", "Water", "Protein", "Chlorophyll"] },
+      { q: "Functional unit of kidney?", a: "Nephron", opts: ["Nephron", "Neuron", "Alveoli", "Glomerulus"] },
+      { q: "Pituitary, Thyroid, Pancreas are?", a: "Endocrine glands", opts: ["Endocrine glands", "Exocrine glands", "Nerves", "Enzymes"] },
+      { q: "10% Law in food chain means?", a: "Only 10% energy passes to next trophic level", opts: ["Only 10% energy passes to next trophic level", "10% energy lost", "10% food eaten", "10% decrease in population"] },
+      { q: "XX and XY chromosomes determine?", a: "Sex in humans", opts: ["Sex in humans", "Blood group", "Height", "Skin color"] }
+    ];
+
+    let score = 0;
+    let current = 0;
+    let attempts = 0;
+    let selectedAnswer = "";
+
+    function loadQuestion() {
+      const q = questions[current];
+      document.getElementById("question-text").innerText = q.q;
+      const optionsDiv = document.getElementById("options");
+      document.getElementById("quiz-result").innerText = "";
+      selectedAnswer = "";
+      attempts = 0;
+      optionsDiv.innerHTML = "";
+      q.opts.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.innerText = opt;
+        btn.onclick = () => {
+          selectedAnswer = opt.toLowerCase().replace(/\s+/g, '');
+          document.querySelectorAll(".option-btn").forEach(b => b.style.border = "2.5px solid #6a00ff");
+          btn.style.border = "4px solid green";
+        };
+        optionsDiv.appendChild(btn);
+      });
+      updateScore();
+    }
+
+    function submitAnswer() {
+      if (!selectedAnswer) return alert("Please select an option!");
+      attempts++;
+      const correct = questions[current].a.toLowerCase().replace(/\s+/g, '');
+      if (selectedAnswer === correct) {
+        score++;
+        document.getElementById("quiz-result").innerText = "✅ Correct!";
+      } else if (attempts === 1) {
+        document.getElementById("quiz-result").innerText = "❌ Try again!";
+      } else {
+        document.getElementById("quiz-result").innerText = `❌ Correct Answer: ${questions[current].a}`;
+      }
+      updateScore();
+    }
+
+    function nextQuestion() {
+      current = (current + 1) % questions.length;
+      loadQuestion();
+    }
+
+    function updateScore() {
+      document.getElementById("score").innerText = `🏆 Score: ${score} / ${questions.length}`;
+    }
+
+    // Load first question
+    loadQuestion();
+  </script>
+  
+</body>
+</html>
